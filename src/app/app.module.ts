@@ -26,13 +26,15 @@ import {
 } from '@angular/material';
 import { RegisterComponent } from './components/register/register.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    TopBarComponent
+    TopBarComponent,
+    NavbarComponent
 
   ],
   imports: [
