@@ -1,5 +1,5 @@
 
-<mat-card class="example-card">
+<mat-card class="example-card center">
   <mat-card-header>
     <mat-card-title>Register</mat-card-title>
   </mat-card-header>
@@ -29,8 +29,12 @@
     </form>
     <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
   </mat-card-content>
+  <div *ngIf='showProgress' class='mt-5'>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
   <mat-card-actions>
     <button mat-raised-button (click)="register()" color="primary">Register</button>
+    <a class="btn btn-link" routerlink="/login" ng-reflect-router-link="/login" href="/login">Cancel</a>
   </mat-card-actions>
 </mat-card>
   <!-- <iframe src="https://vc.inroad.in/html5client/join?sessionToken=kz5bz9oe1uuzsbjt" allow="camera;microphone" height="600" width="1000"></iframe> -->
