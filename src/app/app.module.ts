@@ -24,10 +24,15 @@ import {
   MatProgressSpinnerModule,
   MatToolbarModule,
 } from '@angular/material';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 import { RegisterComponent } from './components/register/register.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AlertModule } from './components/alert/alert.module';
+import { CategoryComponent } from './components/category/category.component';
+import { AddReviewComponent } from './components/add-review/add-review.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,9 @@ import { AlertModule } from './components/alert/alert.module';
     LoginComponent,
     RegisterComponent,
     NavBarComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryComponent,
+    AddReviewComponent
 
   ],
   imports: [
@@ -62,7 +69,9 @@ import { AlertModule } from './components/alert/alert.module';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,74 @@
+<mat-card class="example-card center">
+  <mat-card-header>
+    <mat-card-title></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+           <td>
+            <p style="text-align: left;margin: 20px;">WRITE A REVIEW<br><span style="color: red;">*</span> Indicates a required field<br><span style="color: red;">*</span> Score:</p>
+           </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Use your name" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+            </mat-form-field>
+          </td>
+      </tr>
+      <tr>
+        <td><mat-form-field class="example-full-width">
+          <input matInput placeholder="Review" [(ngModel)]="review" name="review" required>
+        </mat-form-field></td>
+      </tr>
+      <tr>
+        <td><section class="example-section">
+          <p>What size do you normally wear?</p>
+          <mat-checkbox class="example-margin" [(ngModel)]="sSmall" name="sSmall">Small</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="sMedium" name="sMedium">Medium</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="sLarge" name="sLarge">Large</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="sELarge" name="sELarge">E-Large</mat-checkbox>
+        </section></td>
+      </tr>
+      <tr>
+        <td><section class="example-section">
+          <p>What size did you purchase?</p>
+          <mat-checkbox class="example-margin" [(ngModel)]="pSmall" name="pSmall">Small</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="pMedium" name="pMedium" >Medium</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="pLarge" name="pLarge">Large</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="pELarge" name="pELarge" >E-Large</mat-checkbox>
+        </section></td>
+      </tr>
+      <tr>
+        <td><section class="example-section">
+          <p>How did the product fit?</p>
+          <mat-radio-group [(ngModel)]="productFit">
+            <mat-radio-button class="example-margin" value="small">They run small</mat-radio-button>
+            <mat-radio-button class="example-margin" value="fix">True to size</mat-radio-button>
+            <mat-radio-button class="example-margin" value="big">They run big</mat-radio-button>
+          </mat-radio-group>
+        </section></td>
+      </tr>
+    </table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <div *ngIf='showProgress' class='mt-5'>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+  <mat-card-actions>
+    <button mat-raised-button (click)="addReview()" color="primary">Add Review</button>
+  </mat-card-actions>
+</mat-card>
+<div *ngIf='alertFlag'>
+  <app-alert [message]='alertMsg' [flag]='alertFlag' [count]='count'></app-alert>
+</div>
+
